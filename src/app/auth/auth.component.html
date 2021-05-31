@@ -10,7 +10,14 @@
         <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="person.password"
             [ngModelOptions]="{standalone: true}">
     </div>
-    <button type="submit" class="btn btn-primary" (click)="Ingresar()" routerLink="/home">Submit</button>
+    <button type="submit" class="btn btn-primary" (click)="Ingresar()">Submit</button>
 </form>
+
+<!-- <div class="alert alert-success" role="alert" *ngIf="this.success && !this.fail">
+    Hola
+</div> -->
+<div class="alert alert-danger" role="alert" *ngIf="!this.success && this.fail">
+    Bye
+</div>
 
 <router-outlet></router-outlet>
